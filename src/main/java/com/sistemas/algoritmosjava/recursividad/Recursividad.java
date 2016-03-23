@@ -55,6 +55,15 @@ public class Recursividad {
 		return n*factorial(n-1);
 		
 	}
+	//2^5= 2*2*2*2*2
+	
+	public int potencia(int base, int exp){
+		if(exp==0)
+		  return 1;
+		
+		return base*potencia(base, exp-1);
+	}
+	
 	
 	public static void main(String[] args) {
 		Recursividad rec = new Recursividad();
@@ -66,6 +75,8 @@ public class Recursividad {
 		System.out.println("Mayor" + mayor);
 		
 		System.out.println("Factorial " + rec.factorial(4));
+		
+		System.out.println("Potencia : " + rec.potencia(5, 3));
 	}
 	
 	
